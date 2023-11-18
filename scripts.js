@@ -2,7 +2,7 @@ const key = "1964d0a81a48a309a63c0d58a89bfa02"
 
 function colocarDadosNaTela(dados) {
     console.log(dados);
-    document.querySelector(".mensagem-erro").innerHTML = "";
+    document.querySelector(".mensagem-erro").style.display = dados.cod === "404" ? "block" : "none";
 
     if (dados.cod === "404") {
         document.querySelector(".mensagem-erro").innerHTML = "Não foi possível encontrar a cidade. Certifique-se de que o nome está correto e tente novamente.";
